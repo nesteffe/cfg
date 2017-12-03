@@ -20,6 +20,10 @@ export ANDROID_HOME=/opt/android-sdk
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
 export PERL5LIB=/usr/lib/perl5/vendor_perl
 
+export HISTCONTROL=ignoredups:erasedups
+export HISTSIZE=1000000
+shopt -s histappend
+export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 
 eval $(dircolors ~/.dircolors)
 
