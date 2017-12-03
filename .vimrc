@@ -1,10 +1,11 @@
 " Set 'nocompatible' to ward off unexpected things that your distro might
 " have made, as well as sanely reset options when re-sourcing .vimrc
 set nocompatible
- 
+
 " Attempt to determine the type of a file based on its name and possibly its
 " contents. Use this to allow intelligent auto-indenting for each filetype,
 " and for plugins that are filetype specific.
+filetype off
 filetype indent plugin on
  
 " Enable syntax highlighting
@@ -37,6 +38,8 @@ set wildmenu
  
 " Show partial commands in the last line of the screen
 set showcmd
+
+set showmode
  
 " Highlight searches (use <C-L> to temporarily turn off highlighting; see the
 " mapping of <C-L> below)
@@ -92,7 +95,7 @@ set cmdheight=2
  
 " Display line numbers on the left
 set number
- 
+
 " Quickly time out on keycodes, but never time out on mappings
 set notimeout ttimeout ttimeoutlen=200
  
@@ -111,6 +114,8 @@ set expandtab
 "set shiftwidth=4
 "set tabstop=4
  
+set listchars=tab:▸\ ,eol:¬
+
  
 " Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy,
 " which is the default
