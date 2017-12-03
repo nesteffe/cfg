@@ -18,6 +18,8 @@ export SYSTEMD_EDITOR=vi
 
 export ANDROID_HOME=/opt/android-sdk
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
+export PERL5LIB=/usr/lib/perl5/vendor_perl
+
 
 eval $(dircolors ~/.dircolors)
 
@@ -28,5 +30,6 @@ alias ssh='TERM=xterm-color ssh'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-export PERL5LIB=/usr/lib/perl5/vendor_perl
+
+alias vi=vim
 alias config='/usr/bin/git --git-dir=/home/nesteffe/.cfg/ --work-tree=/home/nesteffe'
