@@ -119,7 +119,7 @@ bindsym $mod+8 workspace $workspace8
 bindsym $mod+9 workspace $workspace9
 bindsym $mod+0 workspace $workspace10
 
-workspace $workspace1 output HDMI-2
+workspace $workspace1 output HDMI-0
 workspace $workspace10 output DisplayPort-0
 
 # move focused container to workspace
@@ -205,6 +205,8 @@ for_window [title="WoT Client"] border none
 for_window [class="Wine"] floating enable
 for_window [title="^Deviation Up*"] floating enable
 for_window [class="Mirage"] floating enable
+for_window [class="copyq"] floating enable
+#for_window [class="Godot" title="Godot Engine*"] floating enable
 
 # Set up screens
 exec --no-startup-id "~/.screenlayout/normalmode.sh"
@@ -233,6 +235,8 @@ exec --no-startup-id "xset s 3600 3600"
 #exec --no-startup-id "/usr/lib/kdeconnectd"
 # Redshift
 exec --no-startup-id redshift-gtk
+# CopyQ
+exec --no-startup-id copyq
 
 # Screenshots
 bindsym Print exec --no-startup-id "scrot ~/Downloads/screenshot%Y-%m-%d_%H-%M-%S.png"
